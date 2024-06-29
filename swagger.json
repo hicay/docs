@@ -1,0 +1,176 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Transcribe Tube",
+    "description": "Welcome to the API Panel for Transcribe Tube",
+    "version": "0.0.1",
+    "contact": {}
+  },
+  "servers": [],
+  "tags": [],
+  "paths": {
+    "/api/list": {
+      "get": {
+        "operationId": "ApiController_getProjects",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Api"
+        ],
+        "security": [
+          {
+            "api-key": []
+          }
+        ]
+      }
+    },
+    "/api/detail/{id}": {
+      "get": {
+        "operationId": "ApiController_findProjectById",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "The ID of the project to retrieve",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Api"
+        ],
+        "security": [
+          {
+            "api-key": []
+          }
+        ]
+      }
+    },
+    "/api/transcribeVideo": {
+      "post": {
+        "operationId": "ApiController_transcribeVideo",
+        "summary": "",
+        "description": "This API endpoint allows users to submit a YouTube video ID along with language preference and a webhook URL. Upon submission, the system processes the request and sends a POST request to the provided webhook URL with project details with transcription.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TranscribeVideoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Api"
+        ],
+        "security": [
+          {
+            "api-key": []
+          }
+        ]
+      }
+    },
+    "/api/transcribeFile": {
+      "post": {
+        "operationId": "ApiController_uploadFile",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "description": "Video/Audio upload",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "language": {
+                    "type": "string",
+                    "description": "Language",
+                    "nullable": false
+                  },
+                  "webhookUrl": {
+                    "type": "string",
+                    "description": "Webhook Url"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "File to be uploaded",
+                    "nullable": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Api"
+        ],
+        "security": [
+          {
+            "api-key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "api-key": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "api-key"
+      }
+    },
+    "schemas": {
+      "TranscribeVideoDto": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "The language of the video",
+            "example": "en"
+          },
+          "webhookUrl": {
+            "type": "string",
+            "description": "The URL to send the transcription results to",
+            "example": "http://example.com/webhook"
+          },
+          "youtubeVideoId": {
+            "type": "string",
+            "description": "The ID of the YouTube video",
+            "example": "dQw4w9WgXcQ",
+            "default": null
+          }
+        },
+        "required": [
+          "language",
+          "webhookUrl",
+          "youtubeVideoId"
+        ]
+      }
+    }
+  }
+}
