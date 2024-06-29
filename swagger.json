@@ -6,7 +6,11 @@
     "version": "0.0.1",
     "contact": {}
   },
-  "servers": [],
+  "servers": [
+    {
+      "url": "https://api.transcribetube.com"
+    }
+  ],
   "tags": [],
   "paths": {
     "/api/list": {
@@ -18,9 +22,7 @@
             "description": ""
           }
         },
-        "tags": [
-          "Api"
-        ],
+        "tags": ["Api"],
         "security": [
           {
             "api-key": []
@@ -47,9 +49,7 @@
             "description": ""
           }
         },
-        "tags": [
-          "Api"
-        ],
+        "tags": ["Api"],
         "security": [
           {
             "api-key": []
@@ -78,9 +78,7 @@
             "description": ""
           }
         },
-        "tags": [
-          "Api"
-        ],
+        "tags": ["Api"],
         "security": [
           {
             "api-key": []
@@ -125,9 +123,7 @@
             "description": ""
           }
         },
-        "tags": [
-          "Api"
-        ],
+        "tags": ["Api"],
         "security": [
           {
             "api-key": []
@@ -165,11 +161,7 @@
             "default": null
           }
         },
-        "required": [
-          "language",
-          "webhookUrl",
-          "youtubeVideoId"
-        ]
+        "required": ["language", "webhookUrl", "youtubeVideoId"]
       }
     }
   }
