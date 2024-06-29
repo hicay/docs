@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "TranscribeTube",
   "logo": {
     "dark": "/logo/black.png",
     "light": "/logo/light.png"
@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:hello@transcribetube.com"
     }
   ],
   "topbarCtaButton": {
@@ -81,19 +81,9 @@
         "api-documentation/endpoint/get-apilist",
         "api-documentation/endpoint/get-apidetail"
       ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-documentation/endpoint/get",
-        "api-documentation/endpoint/create",
-        "api-documentation/endpoint/delete"
-      ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/TranscribeTube"
   }
 }
