@@ -35,12 +35,12 @@
     {
       "name": "Get Started",
       "icon": "book-open-cover",
-      "url": "https://docs.transcribetube.com/"
+      "url": "/"
     },
     {
       "name": "API Documentation",
       "icon": "code",
-      "url": "https://docs.transcribetube.com/api-documentation/introduction"
+      "url": "api-documentation"
     },
     {
       "name": "Blog",
@@ -54,19 +54,11 @@
       "pages": ["introduction"]
     },
     {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
       "group": "API Documentation",
-      "pages": ["api-documentation/introduction"]
+      "pages": [
+        "api-documentation/introduction",
+        "api-documentation/authentication"
+      ]
     },
     {
       "group": "Transcription",
@@ -84,6 +76,7 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/TranscribeTube"
+    "x": "https://x.com/TranscribeTube",
+    "youtube": "https://www.youtube.com/@TranscribeTube"
   }
 }
