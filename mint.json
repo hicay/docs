@@ -78,5 +78,10 @@
   "footerSocials": {
     "x": "https://x.com/TranscribeTube",
     "youtube": "https://www.youtube.com/@TranscribeTube"
+  },
+  "analytics": {
+    "posthog": {
+      "apiKey": "phc_PhdIMJD2O6TARtAbDfTynwiuAeZBkHaNhDCMiGnRzf6"
+    }
   }
 }
