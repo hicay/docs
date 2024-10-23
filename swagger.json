@@ -16,10 +16,20 @@
     "/api/list": {
       "get": {
         "operationId": "ApiController_getProjects",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number for pagination",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": ""
+            "description": "Successful response with list of projects"
           }
         },
         "tags": ["Api"],
@@ -41,6 +51,33 @@
             "description": "The ID of the project to retrieve",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "showTimecode",
+            "in": "query",
+            "description": "Show Timecode on content",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "showSpeaker",
+            "in": "query",
+            "description": "Show Speaker name on content",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "showTranscription",
+            "in": "query",
+            "description": "Show Transcription word by word",
+            "schema": {
+              "type": "boolean",
+              "default": true
             }
           }
         ],
