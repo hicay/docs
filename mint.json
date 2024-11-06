@@ -51,7 +51,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "transcribe-audio-video"]
+      "pages": ["introduction", "transcribe-audio-video", "transcribe-youtube-video", "speaker-identification", "transcription-editor"]
     },
     {
       "group": "API Documentation",
